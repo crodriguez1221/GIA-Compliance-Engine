@@ -1,0 +1,48 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+*.db
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# =========================
+# Streamlit
+# =========================
+.streamlit/
+
+# =========================
+# Vector indexes / ML artifacts
+# =========================
+*.faiss
+*.index
+*.pt
+*.bin
+
+# =========================
+# Visual Studio 2022
+# =========================
+.vs/
+bin/
+obj/
+*.user
+*.suo
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
