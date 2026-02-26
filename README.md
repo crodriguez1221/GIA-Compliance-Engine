@@ -1,212 +1,118 @@
-\# Government Intelligence Agent (GIA)
+# Government Intelligence Agent (GIA)
 
+## Research Prototype: Regulatory Applicability & Conflict Resolution Engine
 
+The Government Intelligence Agent (GIA) is a graduate-level research prototype designed to model regulatory hierarchy, strictness-based conflict resolution, and citation-grounded compliance decision support for Washington State agencies.
 
-\## Overview
-
-
-
-The Government Intelligence Agent (GIA) is a graduate-level research prototype implementing a precedence-aware regulatory applicability engine for Washington State agencies.
-
-
-
-The system models hierarchical legal authority, federal overlay activation, conflict detection, and explainable compliance reasoning using a hybrid symbolic-semantic architecture.
-
-
-
-GIA integrates deterministic authority ranking with vector-based semantic retrieval to formalize regulatory applicability determination within bounded public-sector governance environments.
-
-
+The system formalizes legal precedence and privacy/security strictness principles into explicit computational functions and evaluates their effectiveness using measurable performance metrics.
 
 ---
 
+## For Security & Compliance Professionals (Quick Overview)
 
+GIA implements:
 
-\## Research Motivation
+- Deterministic authority ranking (federal > state > regulation > policy)
+- Strictness-based conflict resolution modeling
+- Citation-grounded output generation
+- Structured audit trace logging
+- Evaluation against gold-standard compliance scenarios
 
-
-
-Public-sector agencies operate within complex, multi-layered regulatory ecosystems composed of:
-
-
-
-\- Federal statutes (e.g., HIPAA)
-
-\- State statutes (RCW)
-
-\- Administrative codes (WAC)
-
-\- Agency-level policy standards (WaTech)
-
-
-
-Determining which authority governs in multi-authority scenarios often requires manual legal interpretation, cross-referencing, and institutional knowledge.
-
-
-
-GIA investigates whether regulatory hierarchy and precedence relationships can be partially formalized into a structured, explainable reasoning framework supported by a working prototype.
-
-
+The prototype demonstrates how regulatory hierarchy can be encoded into transparent, reproducible computational workflows rather than relying on opaque AI inference.
 
 ---
 
+## Research Objective
 
+The core research question:
 
-\## Core Contributions
+> Can regulatory hierarchy and strictness-based conflict resolution be encoded as computational constraints and evaluated for accuracy within a bounded authority corpus?
 
+The system investigates whether a hybrid rule-based and retrieval-grounded architecture can:
 
-
-\- Explicit modeling of constitutional authority hierarchy
-
-\- Federal overlay logic (HIPAA preemption modeling)
-
-\- Deterministic precedence ranking engine
-
-\- Structured conflict detection framework
-
-\- Semantic retrieval using vector embeddings
-
-\- Explainable applicability output schema
-
-\- Reproducible decision-support workflow
-
-
+- Identify applicable authorities for structured agency scenarios
+- Detect and classify regulatory conflicts
+- Apply precedence and strictness models deterministically
+- Produce citation-backed compliance guidance
+- Achieve measurable precision and recall against a gold-standard dataset
 
 ---
 
+## Authority Corpus (Bounded MVP)
 
+### Federal
+- HIPAA Privacy Rule
 
-\## System Architecture
+### Washington State
+- RCW 42.56 – Public Records Act
+- RCW 19.255 – Data Breach Notification
+- RCW 70.02 – Uniform Health Care Information Act
 
+### Regulation
+- Relevant WAC sections tied to above RCWs
 
+### Policy
+- WaTech Data Classification Standard
+- WaTech IT Security Standard
 
-The prototype follows a layered hybrid architecture:
-
-
-
-\*\*Presentation Layer\*\*
-
-\- Streamlit interface for Agency Profile submission
-
-
-
-\*\*Application Layer\*\*
-
-\- FastAPI orchestration
-
-\- Workflow controller
-
-
-
-\*\*Reasoning Layer\*\*
-
-\- Vector embedding similarity retrieval
-
-\- Deterministic precedence ranking model
-
-\- Conflict detection logic
-
-
-
-\*\*Data Layer\*\*
-
-\- Regulatory corpus storage
-
-\- Vector index (FAISS)
-
-\- Structured output logging
-
-
+The corpus is intentionally bounded to preserve experimental control, modeling clarity, and reproducibility.
 
 ---
 
+## System Architecture
 
+The GIA system implements a layered architecture:
 
-\## Methodology
+1. Structured Scenario Input Layer  
+2. Metadata-Driven Applicability Filter  
+3. Precedence & Strictness Conflict Model  
+4. Retrieval Engine (Vector Index – FAISS planned)  
+5. Citation-Grounded Output Layer  
 
-
-
-The system implements a hybrid approach combining:
-
-
-
-1\. Transformer-based sentence embeddings for contextual regulatory retrieval
-
-2\. Cosine similarity-based vector matching
-
-3\. Deterministic hierarchy scoring
-
-4\. Conditional federal overlay activation
-
-5\. Structured justification generation
-
-
-
-This architecture separates semantic similarity from normative authority ordering to preserve constitutional hierarchy integrity.
-
-
+### Data Layer
+- SQLite (local relational storage for MVP)
+- Structured run logging for reproducibility
+- Version-controlled authority corpus
 
 ---
 
+## Modeling Formulation
 
+Two core decision functions are implemented:
 
-\## Current Status
+**Direct Conflict Resolution:**
 
+argmax P(a)
 
+**Additive Constraint Resolution:**
 
-Initial repository scaffold and system architecture design complete.
+argmax S(a)
 
+Where:
 
+- P(a) = Precedence rank of authority *a*
+- S(a) = Strictness score of authority *a*
 
-Upcoming implementation phases:
-
-
-
-\- Backend service development
-
-\- Regulatory corpus segmentation
-
-\- Embedding index construction
-
-\- Precedence model implementation
-
-\- Conflict detection module
-
-\- Prototype UI integration
-
-
+These functions operationalize legal hierarchy and privacy/security dominance principles into deterministic computational constraints.
 
 ---
 
+## Technology Stack (MVP)
 
+- Python 3.11
+- FastAPI (backend – planned integration)
+- Streamlit (prototype UI)
+- SQLite (local database)
+- FAISS (vector retrieval – experimental component)
+- GitHub (version control)
 
-\## Installation (Development Environment – Prototype Setup)
+---
 
+## Installation (Development Environment)
 
-
-Clone the repository:
-
-
-
+```bash
 git clone https://github.com/crodriguez1221/GIA-Compliance-Engine.git
-
 cd GIA-Compliance-Engine
-
-
-
-Create a virtual environment:
-
-
-
 python -m venv .venv
-
-.venv\\Scripts\\activate
-
-
-
-Install dependencies:
-
-
-
+.venv\Scripts\activate
 pip install -r requirements.txt
-
