@@ -45,15 +45,16 @@ The system investigates whether a hybrid rule-based and retrieval-grounded archi
 
 ### Washington State
 - RCW 42.56 – Public Records Act
-- RCW 19.255 – Data Breach Notification
-- RCW 70.02 – Uniform Health Care Information Act
+- RCW 19.255 – Personal Information - Notice of Security Breach
+- RCW 70.02 – Medical Records - Health Care Information Access and Disclosure
 
 ### Regulation
-- Relevant WAC sections tied to above RCWs
+- WAC 246-02 - Public Records
+- WAC 246-10 - Administrative Procedure - Adjudicative Proceedings
 
 ### Policy
 - WaTech Data Classification Standard
-- WaTech IT Security Standard
+- WaTech Cybersecurity Program Policy
 
 The corpus is intentionally bounded to preserve experimental control, modeling clarity, and reproducibility.
 
@@ -111,7 +112,7 @@ These functions operationalize legal hierarchy and privacy/security dominance pr
 ## Installation (Development Environment)
 
 ```bash
-git clone https://github.com/crodriguez1221/GIA-Compliance-Engine.git
+git clone https://github.com/yourusername/GIA-Compliance-Engine.git
 cd GIA-Compliance-Engine
 python -m venv .venv
 .venv\Scripts\activate
