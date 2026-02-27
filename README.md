@@ -41,7 +41,9 @@ The system investigates whether a hybrid rule-based and retrieval-grounded archi
 ## Authority Corpus (Bounded MVP)
 
 ### Federal
-- HIPAA Privacy Rule
+- HIPAA 164.308 - Administrative Safeguards
+- HIPAA 164.312 - Technical Safeguards
+- HIPAA 164.404 - Notification to Individuals
 
 ### Washington State
 - RCW 42.56 – Public Records Act
