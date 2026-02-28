@@ -5,9 +5,15 @@ __pycache__/
 *.py[cod]
 *$py.class
 
+# =====================================================
 # SQLite / Local Databases
+# =====================================================
 *.db
+*.sqlite
 *.sqlite3
+
+# Database folder (local only)
+db/
 
 # =====================================================
 # Virtual Environments
